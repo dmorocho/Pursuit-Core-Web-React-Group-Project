@@ -24,21 +24,29 @@ const handleLogIn = async (email, password) => {
     let res = await axios.post("/users/login", {email});
     if(res.data.user){
       setError(false);
-      
+      setUser(res.data.user);
+      setLoggedIn(true)
+    }else{
+      setError(true)
     }
   }catch(err){
+    setError(true)
     console.log(err)
   }
 }
-
+  if(!loggedIn){
   return (
     <div className="App">
       {/* <SearchBar/> */}
+      <Navbar setLoggedIn={setLoggedIn}/>
+      <Switch>
+
       <Feedpage />
       {/* <Userpage /> */}
       {/* <HomePage /> */}
       {/* <TrendingReactions/>
       <UploadPost/> */}
+      </Switch>
     </div>
   );
 }
