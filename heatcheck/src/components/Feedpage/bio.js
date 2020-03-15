@@ -17,7 +17,7 @@ const Bio = () => {
   // const didMount = useRef(false);
 
   const getcurrentUser = async () => {
-    const url = `http://localhost:3001/users/${id}`;
+    const url = `http://localhost:3001/users/1`;
 
     try {
       let res = await axios.get(url);
