@@ -1,7 +1,7 @@
 import Posts from "./Feedpage/posts";
 import Bio from "./Feedpage/bio";
 import Reactions from "./Feedpage/reactions";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 // import NavBar from "./nav_bar";
 // import UploadPost from "./uploadPost";
 import Banner from "./banner";
@@ -10,10 +10,9 @@ import React, { Component, useEffect, useState, useRef } from "react";
 import axios from "axios";
 let url = "http://localhost:3001/posts/2";
 // let currentUser = sessionStorage.UserID;
-const Friendpage = (props) => {
+const Friendpage = props => {
   const [allposts, setallposts] = useState([]);
-  // const didMount = useRef(false);
-
+  // const didMount = useRef(false);`
   const getAllposts = async () => {
     try {
       let res = await axios.get(url);

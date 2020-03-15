@@ -3,7 +3,7 @@ import Comments from "./comment";
 import Reactions from "./reactions";
 import axios from "axios";
 import { string } from "prop-types";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 let currentUserID = sessionStorage.getItem("userID");
 const styles = {
@@ -75,10 +75,11 @@ const Post = ({
   getAllposts
 }) => {
   const [showComments, setshowComments] = useState(false);
-  const history = useHistory()
+  const history = useHistory();
+
   const handImgClick = () => {
-    console.log(user_id)
-    history.push(`/friend/${user_id}`)
+    console.log(user_id);
+    history.push(`/friend/${user_id}`);
   };
   const displayPost = () => {
     // let brand = brand.toUpperCase();
@@ -111,7 +112,7 @@ const Post = ({
         <p id="brand" style={styles["#brand"]}>
           <strong>Brand: </strong>
           {brand}
-          <br/>
+          <br />
           <strong>Release:</strong> {release}
         </p>
         <p style={styles["#brand"]}>
