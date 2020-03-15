@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useInput } from "../../util/customHooks.js";
-import loginIcon from "./media/logo.svg";
+import loginIcon from "./media/heatcheck.png";
 import "../../css/form.scss";
 import { Redirect, useHistory, Link } from "react-router-dom";
 

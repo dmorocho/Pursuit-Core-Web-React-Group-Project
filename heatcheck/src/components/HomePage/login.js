@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {useHistory} from "react-router-dom"
 import axios from "axios"
 import {useInput} from "../../util/customHooks.js"
-import loginIcon from "./media/logo.svg"
+import loginIcon from "./media/heatcheck.png"
 import "../../css/form.scss"
 
 const Login = (props) => {
