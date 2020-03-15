@@ -44,6 +44,9 @@ const FeedPage = () => {
         <UploadPost getAllposts={getAllposts} />
       </div>
       <div class="footerContainer"> </div>
+      <div>
+        <button>click</button>
+      </div>
     </div>
   );
 };
