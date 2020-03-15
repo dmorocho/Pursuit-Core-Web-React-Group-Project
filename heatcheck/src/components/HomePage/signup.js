@@ -6,6 +6,7 @@ import "../../css/form.scss";
 import { Redirect, useHistory, Link } from "react-router-dom";
 
 const SignUp = props => {
+  const history = useHistory()
   const newFullName = useInput("");
   const newUsername = useInput("");
   const newEmail = useInput("");
@@ -29,8 +30,7 @@ const SignUp = props => {
 
       if (status === "success") {
         sessionStorage.setItem("userID", user.id);
-        let session = sessionStorage.getItem("userID");
-        console.log(session);
+        history.push("/feed")
       }
     } catch (err) {
       console.log(err);
