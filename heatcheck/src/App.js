@@ -40,7 +40,31 @@ const handleLogIn = async (email, password) => {
       {/* <SearchBar/> */}
       <Navbar setLoggedIn={setLoggedIn}/>
       <Switch>
-
+        <Redirect exact from="/login" to="/"/>
+        <Redirect exact from="/signup" to="/"/>
+        <Route path="/profile">
+          <Profile user={user} />
+        </Route>
+        <Route exact path="/">
+          <Home user={user}/>
+        </Route>
+      </Switch>
+      </div>
+  )
+  }else{
+    return(
+      <div className="App">
+        <Switch>
+          <Redirect exact from="/" to="/login" />
+          <Redirect exact from="/profile" to="/login"/>
+          <Route path={"/login"}>
+            <Login handleLogIn={handleLogIn} error={error} errorText={errorText}/>
+          </Route>
+          
+        </Switch>
+      </div>
+    )
+  }
       <Feedpage />
       {/* <Userpage /> */}
       {/* <HomePage /> */}
